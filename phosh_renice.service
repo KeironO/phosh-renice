@@ -1,0 +1,12 @@
+[Unit]
+Description=Phosh Priority Hack
+After=phosh.service
+Requires=phosh.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStart=/usr/bin/bash /home/mobian/.local/bin/phosh_renice.sh
+
+[Install]
+WantedBy=multi-user.target
