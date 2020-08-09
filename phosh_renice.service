@@ -5,7 +5,7 @@ Requires=phosh.service
 
 [Service]
 TimeoutStartSec=0
-Restart=always
+Restart=on-failure
 ExecStart=/usr/bin/bash /home/mobian/.local/bin/phosh_renice.sh 
 
 [Install]
