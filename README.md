@@ -15,7 +15,7 @@ Run the following:
 ```
 $ git clone https://github.com/KeironO/phosh-renice
 $ cd phosh-renice
-$ sudo ./install
+$ sudo ./install.sh
 ```
 
 To uninstall:
