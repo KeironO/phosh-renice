@@ -7,15 +7,15 @@ if [ $UID -ne 0 ]; then
 fi
 
 echo "Disabling autostart"
-if ! systemctl disable phosh_renice; then
-	echo "Failed to disable the phosh_renice service, aborting"
+if ! systemctl disable phosh-renice; then
+	echo "Failed to disable the phosh-renice service, aborting"
 	exit 1
 fi
 
 # This might be unneccesary and not work for one-shot services
 echo "Stopping service"
-if ! systemctl stop phosh_renice; then
-	echo "Failed to stop the phosh_renice service, aborting"
+if ! systemctl stop phosh-renice; then
+	echo "Failed to stop the phosh-renice service, aborting"
 	exit 1
 fi
 
@@ -25,8 +25,8 @@ if ! rm /usr/local/sbin/phosh_renice; then
 	exit 1
 fi
 
-if ! rm /etc/systemd/system/phosh_renice.service; then
-	echo "Failed to remove /etc/systemd/system/phosh_renice.service, aborting"
+if ! rm /etc/systemd/system/phosh-renice.service; then
+	echo "Failed to remove /etc/systemd/system/phosh-renice.service, aborting"
 	exit 1
 fi
 
@@ -39,5 +39,5 @@ if [ ! -z /usr/local/sbin ]; then
 	fi
 fi
 
-echo "Successfully uninstalled the phosh_renice service."
+echo "Successfully uninstalled the phosh-renice service."
 

@@ -1,0 +1,12 @@
+[Unit]
+Description=Phosh Priority Hack
+After=phosh.service
+Requires=phosh.service
+
+[Service]
+TimeoutStartSec=0
+Restart=on-failure
+ExecStart=/usr/bin/bash /usr/local/sbin/phosh_renice
+
+[Install]
+WantedBy=multi-user.target

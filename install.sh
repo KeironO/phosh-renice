@@ -20,22 +20,22 @@ if ! cp phosh_renice.sh /usr/local/sbin/phosh_renice; then
 	exit 1
 fi
 
-if ! cp phosh_renice.service /etc/systemd/system/; then
-	echo "Failed to copy phosh_renice.service, aborting"
+if ! cp phosh-renice.service /etc/systemd/system/; then
+	echo "Failed to copy phosh-renice.service, aborting"
 	exit 1
 fi
 
 echo "Starting service"
-if ! systemctl start phosh_renice; then
-	echo "Failed to start the phosh_renice service, aborting"
+if ! systemctl start phosh-renice; then
+	echo "Failed to start the phosh-renice service, aborting"
 	exit 1
 fi
 
 echo "Enabling autostart"
-if ! systemctl enable phosh_renice; then
-	echo "Failed to enable the phosh_renice service, aborting"
+if ! systemctl enable phosh-renice; then
+	echo "Failed to enable the phosh-renice service, aborting"
 	exit 1
 fi
 
-echo "Successfully installed the phosh_renice service."
+echo "Successfully installed the phosh-renice service."
 
