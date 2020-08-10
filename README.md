@@ -18,4 +18,8 @@ $ cd phosh-renice
 $ sudo ./install
 ```
 
+To uninstall:
+```
+$ sudo ./uninstall.sh
+```
 
