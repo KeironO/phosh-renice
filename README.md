@@ -1,6 +1,8 @@
 # phosh-renice
 
-A hack to prioritse calls, phoc, phosh and squeekboard on startup. This is quite useful when the phone is coming out of deep sleep mode and is recieving a call as it sometimes takes upwards of 20 seconds for the phone to reload the Calls app.
+Have you ever missed a call on your PinePhone/Librem 5 because it didn't wake up quick enough from deep sleep?
+
+This little hack aims to resolve that by prioritising calls, NetworkManager, phoc, phosh and squeekboard on startup.
 
 ## How to install
 
@@ -18,8 +20,13 @@ $ cd phosh-renice
 $ sudo ./install.sh
 ```
 
-To uninstall:
+And you should be good to go :)
+
+To uninstall, simply run:
 ```
 $ sudo ./uninstall.sh
 ```
 
+## Copyright and license
+
+Code released under [the MIT license](https://github.com/KeironO/phosh-renice/blob/master/LICENSE).
