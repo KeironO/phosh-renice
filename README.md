@@ -15,9 +15,9 @@ Run the following:
 ```
 $ git clone https://github.com/KeironO/phosh-renice
 $ cd phosh-renice
-$ sudo mkdir -p /usr/local/bin
-$ sudo cp phosh_renice.sh /usr/local/bin/phosh_renice
-$ sudo chmod +x /usr/local/bin/phosh_renice
+$ sudo mkdir -p /usr/local/sbin
+$ sudo cp phosh_renice.sh /usr/local/sbin/phosh_renice
+$ sudo chmod +x /usr/local/sbin/phosh_renice
 $ sudo cp phosh_renice.service /etc/systemd/system/
 $ sudo systemctl start phosh_renice
 $ sudo systemctl enable phosh_renice
