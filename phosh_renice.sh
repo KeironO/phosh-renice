@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo renice -n -1 -p $(pidof calls)
-sudo renice -n -1 -p $(pidof phoc)
-sudo renice -n -1 -p $(pidof phosh)
-sudo renice -n -1 -p $(pidof squeekboard)
+PIDS = "$(pidof phoc) $(pidof phosh) $(pidof squeekboard) $(pidof calls)"
+renice -n -1 -p $PIDS
+
