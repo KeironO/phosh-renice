@@ -1,6 +1,6 @@
 # phosh-renice
 
-Have you ever missed a call on your PinePhone/Librem 5 because it didn't wake up quick enough from deep sleep?
+Have you ever missed a call on your PinePhone because it didn't wake up quick enough from deep sleep?
 
 This little hack aims to resolve that by prioritising calls, NetworkManager, phoc, phosh and squeekboard on startup.
 
