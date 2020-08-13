@@ -31,7 +31,7 @@ if ! rm /etc/systemd/system/phosh-renice.service; then
 fi
 
 # Remove /usr/local/sbin if it's empty (probably created by the install script)
-if [ ! -z /usr/local/sbin ]; then
+if [ -z /usr/local/sbin ]; then
 	echo "Directory /usr/local/sbin is empty, removing..."
 	if ! rm -rf /usr/local/sbin; then
 		echo "Failed to remove /usr/local/sbin, aborting"
